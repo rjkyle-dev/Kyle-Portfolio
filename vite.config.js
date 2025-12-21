@@ -12,5 +12,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['ogl']
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
   }
 })

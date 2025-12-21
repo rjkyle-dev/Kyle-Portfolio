@@ -1,10 +1,13 @@
 import { serve } from "bun";
-import index from "./index.html";
+import { file } from "bun";
+import { join } from "path";
+
+const indexFile = file(join(import.meta.dir, "..", "index.html"));
 
 const server = serve({
   routes: {
     // Serve index.html for all unmatched routes.
-    "/*": index,
+    "/*": indexFile,
 
     "/api/hello": {
       async GET(req) {

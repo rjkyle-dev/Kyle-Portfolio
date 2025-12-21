@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import ProfileCard from "./Profile-Card";
 // import Lanyard from "./Lanyard";
 
 const fadeInUp = {
@@ -27,12 +28,36 @@ export const About = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="hero-container">
+      <motion.div
+          className="hero-image-container"
+          variants={fadeInUp}
+        >
+          <ProfileCard
+            name="KyleDev"
+            title="Full Stack Developer"
+            handle="rjkyle-dev"
+            status="Available for work"
+            contactText="Contact Me"
+            avatarUrl="public/personal-crop-removebg-preview.png"
+            iconUrl=""
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={() => {
+              const contactSection = document.getElementById('contacts');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          />
+        </motion.div>
         {/* <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} /> */}
         <motion.div
           className="hero-image-container"
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: -20 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          style={{ marginLeft: '-2rem' }}
         >
           <div className="code-display">
             <SyntaxHighlighter
@@ -83,6 +108,7 @@ export const About = () => {
             </div>
           </motion.div>
         </motion.div>
+        
       </div>
     </motion.section>
   );

@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import ProfileCard from "./Profile-Card";
 import Threads from "./Threads";
 
 const fadeInUp = {
@@ -40,32 +37,34 @@ export const Hero = () => {
           zIndex: 0
         }}
       />
-      <div className="hero-container">
+      <div className="hero-container" style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <motion.div
           className="hero-content"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
+          style={{ textAlign: 'center', maxWidth: '100%', width: '100%' }}
         >
-          <motion.div className="hero-badge">
+          <motion.div className="hero-badge" style={{ margin: '0 auto 1.5rem' }}>
             <span> Hello, I'm </span>
           </motion.div>
           <motion.h1
             className="glitch"
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
+            style={{ textAlign: 'center' }}
           >
             KyleDev
           </motion.h1>
-          <motion.h2 className="hero-subtitle" variants={fadeInUp}>
+          <motion.h2 className="hero-subtitle" variants={fadeInUp} style={{ textAlign: 'center' }}>
             {" "}
             Full Stack Developer
           </motion.h2>
-          <motion.p className="hero-description" variants={fadeInUp}>
+          <motion.p className="hero-description" variants={fadeInUp} style={{ textAlign: 'center' }}>
             I am a full stack developer with a passion for creating beautiful and functional web applications.
           </motion.p>
 
-          <motion.div className="cta-buttons" variants={staggerContainer}>
+          <motion.div className="cta-buttons" variants={staggerContainer} style={{ justifyContent: 'center', marginTop: '2rem' }}>
             <motion.a
               href="#projects"
               className="cta-primary"
@@ -76,7 +75,7 @@ export const Hero = () => {
               View Projects
             </motion.a>
             <motion.a
-              href="public/KyleDev-CV.pdf"
+              href="public\cv\CV-Labrador.pdf"
               download="KyleDev-CV.pdf"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
@@ -85,7 +84,7 @@ export const Hero = () => {
              Download CV
             </motion.a>
           </motion.div>
-          <motion.div className="social-links" variants={staggerContainer}>
+          <motion.div className="social-links" variants={staggerContainer} style={{ justifyContent: 'center', marginTop: '2rem' }}>
             <motion.a href="https://github.com/rjkyle-dev" target="_blank">
               <i className="fab fa-github"> </i>
             </motion.a>
@@ -98,29 +97,6 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div 
-          className="hero-image-container"
-          variants={fadeInUp}
-        >
-          <ProfileCard
-            name="KyleDev"
-            title="Full Stack Developer"
-            handle="rjkyle-dev"
-            status="Available for work"
-            contactText="Contact Me"
-            avatarUrl="public/personal-crop-removebg-preview.png"
-            iconUrl=""
-            showUserInfo={true}
-            enableTilt={true}
-            enableMobileTilt={false}
-            onContactClick={() => {
-              const contactSection = document.getElementById('contacts');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          />
-        </motion.div>
       </div>
     </motion.section>
   );

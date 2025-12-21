@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['ogl']
+    include: ['ogl', 'react-syntax-highlighter']
   },
   build: {
     outDir: 'dist',

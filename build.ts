@@ -117,10 +117,22 @@ if (existsSync(outdir)) {
 
 const start = performance.now();
 
-const entrypoints = [...new Bun.Glob("**.html").scanSync("src")]
+// Look for HTML files in root directory first, then src as fallback
+const rootHtmlFiles = [...new Bun.Glob("*.html").scanSync(".")]
+  .map(a => path.resolve(process.cwd(), a))
+  .filter(dir => !dir.includes("node_modules"));
+  
+const srcHtmlFiles = [...new Bun.Glob("**.html").scanSync("src")]
   .map(a => path.resolve("src", a))
   .filter(dir => !dir.includes("node_modules"));
+
+const entrypoints = [...rootHtmlFiles, ...srcHtmlFiles];
 console.log(`📄 Found ${entrypoints.length} HTML ${entrypoints.length === 1 ? "file" : "files"} to process\n`);
+
+if (entrypoints.length === 0) {
+  console.error("❌ No HTML files found. Please ensure index.html exists in the root directory.");
+  process.exit(1);
+}
 
 const result = await Bun.build({
   entrypoints,

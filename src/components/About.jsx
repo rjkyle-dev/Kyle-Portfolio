@@ -76,10 +76,12 @@ export const About = () => {
               {`const aboutMe: DeveloperProfile = {
   codename: "KyleDev",
   origin: "Mayaon Montevista Davao de Oro",
-  role: "Fullstack Web Sorcerer",
+  role: "Full Stack Developer & Software Developer",
   stack: {
-    languages: ["JavaScript", "TypeScript", "SQL"],
-    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
+    languages: ["JavaScript", "TypeScript", "MySQL", "PHP", "CSharp"],
+    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase", 
+    "Node.js", 
+    "Firebase"],
   },
   traits: [
     "pixel-perfectionist",

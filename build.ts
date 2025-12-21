@@ -137,18 +137,6 @@ const result = await Bun.build({
 
 const end = performance.now();
 
-// Copy public folder to dist if it exists
-const publicDir = path.join(process.cwd(), "public");
-const distPublicDir = path.join(outdir, "public");
-if (existsSync(publicDir)) {
-  console.log(`📁 Copying public folder to ${distPublicDir}`);
-  const { cp } = await import("fs/promises");
-  if (existsSync(distPublicDir)) {
-    await rm(distPublicDir, { recursive: true, force: true });
-  }
-  await cp(publicDir, distPublicDir, { recursive: true });
-}
-
 const outputTable = result.outputs.map(output => ({
   File: path.relative(process.cwd(), output.path),
   Type: output.kind,

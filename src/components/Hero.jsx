@@ -48,7 +48,7 @@ export const Hero = () => {
           animate="animate"
         >
           <motion.div className="hero-badge">
-            <span> 👋 Hello, I'm </span>
+            <span> Hello, I'm </span>
           </motion.div>
           <motion.h1
             className="glitch"
@@ -59,12 +59,10 @@ export const Hero = () => {
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             {" "}
-            Creative Developer & Designer
+            Full Stack Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I craft beautiful digital experiences that combine stunning design
-            with powerful functionality. Specializing in modern web applications
-            and interactive user interfaces.
+            I am a full stack developer with a passion for creating beautiful and functional web applications.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -75,15 +73,16 @@ export const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               {" "}
-              View My Work
+              View Projects
             </motion.a>
             <motion.a
-              href="#contacts"
+              href="public/KyleDev-CV.pdf"
+              download="KyleDev-CV.pdf"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Me
+             Download CV
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
@@ -105,12 +104,12 @@ export const Hero = () => {
         >
           <ProfileCard
             name="KyleDev"
-            title="Creative Developer & Designer"
+            title="Full Stack Developer"
             handle="rjkyle-dev"
             status="Available for work"
             contactText="Contact Me"
-            avatarUrl="/public/avatar.jpg"
-            // iconUrl="/code-icon.svg"
+            avatarUrl="public/personal-crop-removebg-preview.png"
+            iconUrl=""
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}

@@ -100,9 +100,27 @@
   .pc-inside {
     inset: 0;
     position: absolute;
-    background-image: var(--inner-gradient);
+    background-image: var(--icon), var(--inner-gradient);
+    background-size: 70% 70%, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     background-color: rgba(0, 0, 0, 0.9);
     transform: none;
+    opacity: 1;
+  }
+  
+  .pc-inside::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--icon);
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+    z-index: 0;
   }
   
   .pc-shine {

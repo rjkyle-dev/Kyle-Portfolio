@@ -2,6 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
+import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -18,10 +19,10 @@ function App() {
   return (
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
-
       <Hero />
+      <About />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
 
       <motion.footer
         className="footer"

@@ -1,0 +1,30 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="codePattern" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+      <!-- Code symbols scattered across the pattern -->
+      <text x="30" y="50" font-family="'Fira Code', monospace" font-size="48" fill="white" opacity="0.4" transform="rotate(-15 30 50)">&lt; /&gt;</text>
+      
+      <text x="320" y="120" font-family="'Fira Code', monospace" font-size="42" fill="white" opacity="0.35" transform="rotate(20 320 120)">&lt; /&gt;</text>
+      
+      <text x="80" y="240" font-family="'Fira Code', monospace" font-size="52" fill="white" opacity="0.4" transform="rotate(-10 80 240)">&lt; /&gt;</text>
+      
+      <text x="280" y="40" font-family="'Fira Code', monospace" font-size="38" fill="white" opacity="0.3" transform="rotate(25 280 40)">&lt; /&gt;</text>
+      
+      <text x="350" y="300" font-family="'Fira Code', monospace" font-size="44" fill="white" opacity="0.38" transform="rotate(-20 350 300)">&lt; /&gt;</text>
+      
+      <text x="50" y="180" font-family="'Fira Code', monospace" font-size="40" fill="white" opacity="0.32" transform="rotate(15 50 180)">&lt; /&gt;</text>
+      
+      <text x="300" y="220" font-family="'Fira Code', monospace" font-size="50" fill="white" opacity="0.4" transform="rotate(-25 300 220)">&lt; /&gt;</text>
+      
+      <text x="150" y="100" font-family="'Fira Code', monospace" font-size="36" fill="white" opacity="0.3" transform="rotate(10 150 100)">&lt; /&gt;</text>
+      
+      <text x="200" y="340" font-family="'Fira Code', monospace" font-size="42" fill="white" opacity="0.35" transform="rotate(18 200 340)">&lt; /&gt;</text>
+      
+      <text x="120" y="280" font-family="'Fira Code', monospace" font-size="38" fill="white" opacity="0.33" transform="rotate(-12 120 280)">&lt; /&gt;</text>
+      
+      <text x="250" y="160" font-family="'Fira Code', monospace" font-size="46" fill="white" opacity="0.37" transform="rotate(22 250 160)">&lt; /&gt;</text>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#codePattern)"/>
+</svg>
+

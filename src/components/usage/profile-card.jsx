@@ -6,8 +6,8 @@ import ProfileCard from './Profilecard'
   handle="kyle-dev"
   status="Online"
   contactText="Contact Me"
-  avatarUrl="public/personal.jpg"
-  iconUrl="public/code.svg"
+  avatarUrl="/personal.jpg"
+  iconUrl="/code.svg"
   showUserInfo={true}
   enableTilt={true}
   enableMobileTilt={false}

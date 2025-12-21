@@ -38,7 +38,7 @@ export const About = () => {
             handle="rjkyle-dev"
             status="Available for work"
             contactText="Contact Me"
-            avatarUrl="public/personal-crop-removebg-preview.png"
+            avatarUrl="/personal-crop-removebg-preview.png"
             iconUrl=""
             showUserInfo={true}
             enableTilt={true}

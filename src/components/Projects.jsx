@@ -46,7 +46,7 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('public/cfar/cfar-landing.png')" }}
+            style={{ backgroundImage: "url('/cfar/cfar-landing.png')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
           <h3>Biometric Attendance System(HRIS)</h3>
@@ -55,40 +55,40 @@ export const Projects = () => {
           </p>
           <div className="project-tech">
             <div className="tech-icon" title="React 19">
-              <img src="public/Icon/react.svg" alt="React 19" />
+              <img src="/Icon/react.svg" alt="React 19" />
             </div>
             <div className="tech-icon" title="Node.js">
-              <img src="public/Icon/nodejs.svg" alt="Node.js" />
+              <img src="/Icon/nodejs.svg" alt="Node.js" />
             </div>
             <div className="tech-icon" title="MySQL">
-              <img src="public/Icon/mysql.svg" alt="MySQL" />
+              <img src="/Icon/mysql.svg" alt="MySQL" />
             </div>
             <div className="tech-icon" title="JavaScript">
-              <img src="public/Icon/javascript.svg" alt="JavaScript" />
+              <img src="/Icon/javascript.svg" alt="JavaScript" />
             </div>
             <div className="tech-icon" title="HTML">
-              <img src="public/Icon/html.svg" alt="HTML" />
+              <img src="/Icon/html.svg" alt="HTML" />
             </div>
             <div className="tech-icon" title="CSS">
-              <img src="public/Icon/css.svg" alt="CSS" />
+              <img src="/Icon/css.svg" alt="CSS" />
             </div>
             <div className="tech-icon" title="Socket.io">
-              <img src="public/Icon/socket.svg" alt="Socket.io" />
+              <img src="/Icon/socket.svg" alt="Socket.io" />
             </div>
             <div className="tech-icon" title="TailwindCSS">
-              <img src="public/Icon/tailwindcss.svg" alt="TailwindCSS" />
+              <img src="/Icon/tailwindcss.svg" alt="TailwindCSS" />
             </div>
             <div className="tech-icon" title="Git">
-              <img src="public/Icon/git.svg" alt="Git" />
+              <img src="/Icon/git.svg" alt="Git" />
             </div>
             <div className="tech-icon" title="GitHub">
-              <img src="public/Icon/github.svg" alt="GitHub" />
+              <img src="/Icon/github.svg" alt="GitHub" />
             </div>
             <div className="tech-icon" title="Laravel 12">
-              <img src="public/Icon/laravel.svg" alt="Laravel" />
+              <img src="/Icon/laravel.svg" alt="Laravel" />
             </div>
             <div className="tech-icon" title="CSharp">
-              <img src="public/Icon/csharp.svg" alt="CSharp" />
+              <img src="/Icon/csharp.svg" alt="CSharp" />
             </div>
           </div>
         </motion.div>
@@ -101,7 +101,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('public/yugo/yugo.png')",
+              backgroundImage: "url('/yugo/yugo.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -112,22 +112,22 @@ export const Projects = () => {
           </p>
           <div className="project-tech">
             <div className="tech-icon" title="PHP">
-              <img src="public/Icon/php.svg" alt="PHP" />
+              <img src="/Icon/php.svg" alt="PHP" />
             </div>
             <div className="tech-icon" title="Bootstrap">
-              <img src="public/Icon/bootstrap.svg" alt="Bootstrap" />
+              <img src="/Icon/bootstrap.svg" alt="Bootstrap" />
             </div>
             <div className="tech-icon" title="JavaScript">
-              <img src="public/Icon/javascript.svg" alt="JavaScript" />
+              <img src="/Icon/javascript.svg" alt="JavaScript" />
             </div>
             <div className="tech-icon" title="CSS">
-              <img src="public/Icon/css.svg" alt="CSS" />
+              <img src="/Icon/css.svg" alt="CSS" />
             </div>
             <div className="tech-icon" title="HTML">
-              <img src="public/Icon/html.svg" alt="HTML" />
+              <img src="/Icon/html.svg" alt="HTML" />
             </div>
             <div className="tech-icon" title="MySQL">
-              <img src="public/Icon/mysql.svg" alt="MySQL" />
+              <img src="/Icon/mysql.svg" alt="MySQL" />
             </div>
           </div>
         </motion.div>
@@ -140,7 +140,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('public/projects/agriyas.png')",
+              backgroundImage: "url('/projects/agriyas.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -151,13 +151,13 @@ export const Projects = () => {
           </p>
           <div className="project-tech">
             <div className="tech-icon" title="HTML">
-              <img src="public/Icon/html.svg" alt="HTML" />
+              <img src="/Icon/html.svg" alt="HTML" />
             </div>
             <div className="tech-icon" title="JavaScript">
-              <img src="public/Icon/javascript.svg" alt="JavaScript" />
+              <img src="/Icon/javascript.svg" alt="JavaScript" />
             </div>
             <div className="tech-icon" title="CSS">
-              <img src="public/Icon/css.svg" alt="CSS" />
+              <img src="/Icon/css.svg" alt="CSS" />
             </div>
           </div>
         </motion.div>
@@ -169,7 +169,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('public/projects/kyle-portfolio.png')",
+              backgroundImage: "url('/projects/kyle-portfolio.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -180,22 +180,22 @@ export const Projects = () => {
           </p>
           <div className="project-tech">
             <div className="tech-icon" title="HTML">
-              <img src="public/Icon/html.svg" alt="HTML" />
+              <img src="/Icon/html.svg" alt="HTML" />
             </div>
             <div className="tech-icon" title="JavaScript">
-              <img src="public/Icon/javascript.svg" alt="JavaScript" />
+              <img src="/Icon/javascript.svg" alt="JavaScript" />
             </div>
             <div className="tech-icon" title="CSS">
-              <img src="public/Icon/css.svg" alt="CSS" />
+              <img src="/Icon/css.svg" alt="CSS" />
             </div>
             <div className="tech-icon" title="Framer Motion">
-              <img src="public/Icon/framer-motion.svg" alt="Framer Motion" />
+              <img src="/Icon/framer-motion.svg" alt="Framer Motion" />
             </div>
             <div className="tech-icon" title="GitHub">
-              <img src="public/Icon/github.svg" alt="GitHub" />
+              <img src="/Icon/github.svg" alt="GitHub" />
             </div>
             <div className="tech-icon" title="Vite">
-              <img src="public/Icon/tailwindcss.svg" alt="Vite" />
+              <img src="/Icon/tailwindcss.svg" alt="Vite" />
             </div>
           </div>
         </motion.div>

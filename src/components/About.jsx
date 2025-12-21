@@ -21,7 +21,7 @@ const staggerContainer = {
 export const About = () => {
   return (
     <motion.section
-      id="home"
+      id="about"
       className="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -83,15 +83,13 @@ export const About = () => {
     "Node.js", 
     "Firebase"],
   },
-  traits: [
-    "pixel-perfectionist",
-    "API whisperer",
-    "dark mode advocate",
-    "terminal aesthetic enthusiast",
+  motto: [
+    "choose progress, over perfection",
   ],
   missionStatement:
     "Turning ideas into interfaces and bugs into feature",
-  availability: "Available for hire",
+  availability: ["Available for hire", "Available for work",
+  "Collaboration", "Commission","Freelance"],
 };`}
             </SyntaxHighlighter>
           </div>

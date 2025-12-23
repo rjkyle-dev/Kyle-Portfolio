@@ -7,9 +7,9 @@ import ProfileCard from './Profilecard'
   status="Online"
   contactText="Contact Me"
   avatarUrl="/personal.jpg"
-  iconUrl="/code.svg"
+  iconUrl="/code-icon.svg"
   showUserInfo={true}
   enableTilt={true}
   enableMobileTilt={false}
-  onContactClick={() => console.log('Contact clicked')}
+  email="rjkylegepolongcalabrador@gmail.com"
 />

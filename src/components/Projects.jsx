@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import CardSwap, { Card } from 'src/components/Card-Swap'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -24,20 +25,92 @@ export const Projects = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
-        My Projects
-      </motion.h2>
+    
+
+     
+      <div style={{ height: '600px', position: 'relative', top: '-10rem', overflow: 'hidden', width: '100%' }}>
+        <motion.h2
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          style={{ 
+            fontSize: '5rem',
+            fontWeight: 'bold',
+            margin: 0,
+            position: 'absolute',
+            top: '15rem',
+            left: '5rem'
+          }}
+        >
+          Projects
+        </motion.h2>
+        <div className="flex items-center gap-4 absolute top-10 left-10" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+          <CardSwap
+            cardDistance={60}
+            verticalDistance={70}
+            delay={5000}
+            pauseOnHover={false}
+          >
+            <Card>
+              <img 
+                src="/projects/agriyas.png" 
+                alt="Agriya Tourist Website"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 'inherit'
+                }}
+              />
+            </Card>
+            <Card>
+              <img 
+                src="/projects/kyle-portfolio.png" 
+                alt="Kyle's Portfolio"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 'inherit'
+                }}
+              />
+            </Card>
+            <Card>
+              <img 
+                src="/projects/smart-child.jpeg" 
+                alt="Smart Child"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 'inherit'
+                }}
+              />
+            </Card>
+            <Card>
+              <img 
+                src="/projects/t-shirty.png" 
+                alt="T-Shirty"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 'inherit'
+                }}
+              />
+            </Card>
+          </CardSwap>
+        </div>
+      </div>
+
       <motion.div
         className="project-grid"
         variants={staggerContainer}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
+        style={{ marginTop: '-10rem' }}
       >
         <motion.div
           className="project-card"

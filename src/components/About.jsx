@@ -43,6 +43,7 @@ export const About = () => {
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
+            email="rjkylegepolongcalabrador@gmail.com"
             onContactClick={() => {
               const contactSection = document.getElementById('contacts');
               if (contactSection) {

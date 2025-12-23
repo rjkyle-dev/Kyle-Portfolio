@@ -10,7 +10,7 @@
     --background-x: 50%;
     --background-y: 50%;
     --grain: none;
-    --icon: none;
+    --icon: url(/code-icon.svg);
     --behind-gradient: none;
     --behind-glow-color: rgba(125, 190, 255, 0.67);
     --behind-glow-size: 25%;
@@ -100,10 +100,10 @@
   .pc-inside {
     inset: 0;
     position: absolute;
-    background-image: var(--icon), var(--inner-gradient);
-    background-size: 70% 70%, cover;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
+    background-image: var(--inner-gradient);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.9);
     transform: none;
     opacity: 1;
@@ -117,10 +117,18 @@
     background-size: 70% 70%;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.15;
-    mix-blend-mode: lighten;
+    opacity: 0;
+    mix-blend-mode: screen;
     pointer-events: none;
-    z-index: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+  
+  .pc-card-wrapper:hover .pc-inside::before,
+  .pc-card-wrapper.active .pc-inside::before,
+  .pc-card:hover .pc-inside::before,
+  .pc-card.active .pc-inside::before {
+    opacity: 0.8;
   }
   
   .pc-shine {
@@ -360,6 +368,9 @@
     cursor: pointer;
     transition: all 0.2s ease;
     backdrop-filter: blur(10px);
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
   }
   
   .pc-contact-btn:hover {

@@ -34,6 +34,7 @@ const ProfileCardComponent = ({
   status = 'Online',
   contactText = 'Contact Me',
   showUserInfo = true,
+  email,
   onContactClick
 }) => {
   const wrapRef = useRef(null);
@@ -290,19 +291,34 @@ const ProfileCardComponent = ({
   ]);
 
   const cardStyle = useMemo(
-    () => ({
-      '--icon': iconUrl ? `url(${iconUrl})` : 'none',
-      '--grain': grainUrl ? `url(${grainUrl})` : 'none',
-      '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
-      '--behind-glow-color': behindGlowColor ?? 'rgba(125, 190, 255, 0.67)',
-      '--behind-glow-size': behindGlowSize ?? '50%'
-    }),
+    () => {
+      const style = {
+        '--grain': grainUrl ? `url(${grainUrl})` : 'none',
+        '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
+        '--behind-glow-color': behindGlowColor ?? 'rgba(125, 190, 255, 0.67)',
+        '--behind-glow-size': behindGlowSize ?? '50%'
+      };
+      if (iconUrl) {
+        style['--icon'] = `url(${iconUrl})`;
+      }
+      return style;
+    },
     [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize]
   );
 
-  const handleContactClick = useCallback(() => {
-    onContactClick?.();
-  }, [onContactClick]);
+  const handleContactClick = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (email) {
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+      const gmailWindow = window.open(gmailUrl, '_blank');
+      if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+        window.location.href = gmailUrl;
+      }
+    } else if (onContactClick) {
+      onContactClick();
+    }
+  }, [onContactClick, email]);
 
   return (
     <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
@@ -346,7 +362,11 @@ const ProfileCardComponent = ({
                   <button
                     className="pc-contact-btn"
                     onClick={handleContactClick}
-                    style={{ pointerEvents: 'auto' }}
+                    style={{ 
+                      pointerEvents: 'auto',
+                      position: 'relative',
+                      zIndex: 10
+                    }}
                     type="button"
                     aria-label={`Contact ${name || 'user'}`}
                   >

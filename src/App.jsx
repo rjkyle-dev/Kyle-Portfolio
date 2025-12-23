@@ -4,9 +4,11 @@ import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { TechStack } from "./components/TechStack";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { Feature } from "./components/Feature";
 // import { DotBackgroundDemo } from "./components/Dots-bg";
 
 function App() {
@@ -23,8 +25,10 @@ function App() {
       {/* <DotBackgroundDemo /> */}
       <Hero />
       <About />
+      <TechStack />
       <Projects />
-      {/* <Contact /> */}
+      <Feature />
+      <Contact />
 
       <motion.footer
         className="footer"

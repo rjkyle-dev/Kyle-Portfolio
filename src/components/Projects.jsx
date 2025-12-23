@@ -100,6 +100,18 @@ export const Projects = () => {
                 }}
               />
             </Card>
+            <Card>
+              <img 
+                src="/UI/Purple Gradient Modern UIUX Design Agency Presentation.svg" 
+                alt="Purple Gradient Modern UIUX Design Agency Presentation"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 'inherit'
+                }}
+              />
+            </Card>
           </CardSwap>
         </div>
       </div>
@@ -119,7 +131,12 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/cfar/cfar-landing.png')" }}
+            style={{ 
+              backgroundImage: "url('/UI/HRIS UI.png')",
+              width: '100%', 
+              objectFit: 'cover',
+              // borderRadius: 'inherit'
+            }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
           <h3>Biometric Attendance System(HRIS)</h3>
@@ -174,7 +191,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/yugo/yugo.png')",
+              backgroundImage: "url('/UI/POS.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -213,7 +230,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/agriyas.png')",
+              backgroundImage: "url('/UI/Agriya.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -232,6 +249,9 @@ export const Projects = () => {
             <div className="tech-icon" title="CSS">
               <img src="/Icon/css.svg" alt="CSS" />
             </div>
+            <div className="tech-icon" title="Bootstrap">
+              <img src="/Icon/bootstrap.svg" alt="Bootstrap" />
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -242,7 +262,7 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/kyle-portfolio.png')",
+              backgroundImage: "url('/UI/kyle-portfolio.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
@@ -269,6 +289,32 @@ export const Projects = () => {
             </div>
             <div className="tech-icon" title="Vite">
               <img src="/Icon/tailwindcss.svg" alt="Vite" />
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className="project-card"
+          variants={fadeInUp}
+          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+        >
+          <motion.div
+            className="project-image"
+            style={{
+              backgroundImage: "url('/UI/Polo.png')",
+            }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          />
+          <h3>T-Shirt Customization</h3>
+          <p>
+            T-Shirt, Polo, and Hoodie Customization to customize their products with their own designs.
+          </p>
+          <div className="project-tech">
+            <div className="tech-icon" title="Canva">
+              <img src="/Icon/cava-blues.png" alt="Canva" />
+            </div>
+            <div className="tech-icon" title="Photoshop">
+              <img src="/Icon/photoshop.svg" alt="Photoshop" />
             </div>
           </div>
         </motion.div>

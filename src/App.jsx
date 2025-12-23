@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Feature } from "./components/Feature";
+import { FloatingDockDemo } from "./components/Floating-Icon";
 // import { DotBackgroundDemo } from "./components/Dots-bg";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
+      {/* <FloatingDockDemo /> */}
       {/* <DotBackgroundDemo /> */}
       <Hero />
       <About />

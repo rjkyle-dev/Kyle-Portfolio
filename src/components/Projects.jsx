@@ -102,8 +102,8 @@ export const Projects = () => {
             </Card>
             <Card>
               <img 
-                src="/UI/Purple Gradient Modern UIUX Design Agency Presentation.svg" 
-                alt="Purple Gradient Modern UIUX Design Agency Presentation"
+                src="/projects/image.png" 
+                alt="HRIS Dashboard"
                 style={{
                   width: '100%',
                   height: '100%',
